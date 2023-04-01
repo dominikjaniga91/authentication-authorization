@@ -1,0 +1,32 @@
+table {
+    border-spacing: 1px;
+    border-collapse: collapse;
+    background: cornsilk;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 50%;
+    position: relative;
+}
+
+table td,
+table th {
+    padding-bottom: 10px;
+}
+
+table thead tr {
+    height: 70px;
+    background: azure;
+}
+
+table tbody tr {
+    height: 60px;
+}
+
+table tbody tr:last-child {
+    border: 0;
+}
+
+table td,
+table th {
+    text-align: left;
+}

@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  database:
+    container_name: 'database'
+    image: postgres:latest
+    environment:
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_USER=testuser
+      - POSTGRES_DB=userdb
+    ports:
+      - "5432:5432"
+  auth-app:
+    container_name: 'auth-app'
+    build: ./authentication-authorization
+    ports:
+      - "8080:8080"
+    depends_on:
+      - database

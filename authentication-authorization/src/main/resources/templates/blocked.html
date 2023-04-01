@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Blocked users</title>
+        <link rel="stylesheet" th:href="@{/css/blocked.css}">
+    </head>
+    <body>
+        <h1>Blocked users</h1>
+        <div th:if="${blockedUsers}" class="table100">
+            <div>dsadasdad</div>
+            <table>
+                <thead>
+                    <tr class="table100-head">
+                        <th class="column1">User</th>
+                        <th class="column2">Blocked since</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="user : ${blockedUsers}">
+                        <td th:text="${user.key}" class="column1"></td>
+                        <td th:text="${user.value}" class="column2"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>
